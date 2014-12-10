@@ -58,6 +58,7 @@ game.PlayerEntity = me.Entity.extend({
                 if (!this.renderable.isCurrentAnimation("smallWalk") && this.renderable.isCurrentAnimation("grow") && this.renderable.isCurrentAnimation("shrink")) {
                     this.renderable.setCurrentAnimation("smallWalk");
                     this.renderable.setAnimationFrame();
+                    //this is the current walk animation//
                 }
             } else {
                 this.renderable.setCurrentAnimation("idle");
@@ -67,6 +68,7 @@ game.PlayerEntity = me.Entity.extend({
                 if (!this.renderable.isCurrentAnimation("bigWalk") && this.renderable.isCurrentAnimation("grow") && this.renderable.isCurrentAnimation("shrink")) {
                     this.renderable.setCurrentAnimation("bigWalk");
                     this.renderable.setAnimationFrame();
+                    //this is the walk animation when he eats the mushroom//
                 }
             } else {
                 this.renderable.setCurrentAnimation("bigIdle");
@@ -98,6 +100,7 @@ game.PlayerEntity = me.Entity.extend({
             this.renderable.setCurrentAnimation("grow", "bigIdle");
             this.big = true;
             me.game.world.removeChild(response.b);
+            //this is the animation it makes when mario eats the mushroom//
         }
 
     }
@@ -131,6 +134,7 @@ game.BadGuy = me.Entity.extend({
                 getShape: function() {
                     return (new me.Rect(0, 0, 60, 28)).toPolygon();
                 }
+                //this is the code for the BadGuy//
 
             }]);
 
@@ -191,9 +195,11 @@ game.Mushroom = me.Entity.extend({
                 }
 
             }]);
+        //this is the mushroom properties//
 
         me.collision.check(this);
         this.type = "mushroom";
     }
+    //this is the mushroom collision check, when it gets eaten//
 
 });
