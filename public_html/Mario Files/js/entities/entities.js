@@ -14,7 +14,7 @@ game.PlayerEntity = me.Entity.extend({
             }]);
 
         this.renderable.addAnimation("idle", [3]);
-        this.renderable.addAnimation("bigIdle", [19])
+        this.renderable.addAnimation("bigIdle", [19]);
         this.renderable.addAnimation("smallWalk", [8, 9, 10, 11, 12, 13], 80);
         this.renderable.addAnimation("bigWalk", [14, 15, 16, 17, 18, 19], 80);
         this.renderable.addAnimation("shrink", [0, 1, 2, 3], 80);
@@ -55,7 +55,7 @@ game.PlayerEntity = me.Entity.extend({
         
         if(!this.big){
             if (this.body.vel.x !== 0) {
-                if (!this.renderable.isCurrentAnimation("smallWalk") && this.renderable.isCurrentAnimation("grow") && this.renderable.isCurrentAnimation("shrink")) {
+                if (!this.renderable.isCurrentAnimation("smallWalk") && !this.renderable.isCurrentAnimation("grow") && !this.renderable.isCurrentAnimation("shrink")) {
                     this.renderable.setCurrentAnimation("smallWalk");
                     this.renderable.setAnimationFrame();
                     //this is the current walk animation//
@@ -65,7 +65,7 @@ game.PlayerEntity = me.Entity.extend({
             }
         }else{
              if (this.body.vel.x !== 0) {
-                if (!this.renderable.isCurrentAnimation("bigWalk") && this.renderable.isCurrentAnimation("grow") && this.renderable.isCurrentAnimation("shrink")) {
+                if (!this.renderable.isCurrentAnimation("bigWalk") && !this.renderable.isCurrentAnimation("grow") && !this.renderable.isCurrentAnimation("shrink")) {
                     this.renderable.setCurrentAnimation("bigWalk");
                     this.renderable.setAnimationFrame();
                     //this is the walk animation when he eats the mushroom//

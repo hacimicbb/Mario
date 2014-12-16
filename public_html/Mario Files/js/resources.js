@@ -10,7 +10,6 @@ game.resources = [
            {name: "title-screen", type:"image", src: "data/img/title-screen.png"},
            {name: "slime", type:"image", src: "data/img/slime-spritesheet.png"},
            {name: "mushroom", type:"image", src: "data/img/mushroom.png"},
-           {name: "cloud-tiles", type:"image", src: "data/img/cloud-tiles.png"},
            
 	/* Atlases 
 	 * @example

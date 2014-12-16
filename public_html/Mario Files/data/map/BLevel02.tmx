@@ -33,6 +33,10 @@
  </layer>
  <objectgroup name="EnemyEntities" width="28" height="9">
   <object name="BadGuy" x="210" y="490" width="210" height="68"/>
+  <object x="1816" y="486" height="6"/>
+  <object x="1812" y="488" height="22"/>
+  <object name="BadGuy" x="1262" y="492" width="276" height="66"/>
+  <object name="BadGuy" x="1470" y="486" width="282" height="74"/>
  </objectgroup>
  <objectgroup name="trigger-entities" width="28" height="9">
   <object name="levelTrigger" x="1820" y="420" width="72" height="140">
@@ -40,5 +44,8 @@
     <property name="level" value="BLevel03"/>
    </properties>
   </object>
+ </objectgroup>
+ <objectgroup name="CollectibleEntities" width="28" height="9">
+  <object name="Mushroom" x="1052" y="138" width="68" height="74"/>
  </objectgroup>
 </map>
